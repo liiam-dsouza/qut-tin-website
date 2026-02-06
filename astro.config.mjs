@@ -9,6 +9,6 @@ export default defineConfig({
   },
 
   integrations: [icon()],
-  site: "https://liiam-dsouza.github.io",
-  base: "/qut-tin-website/",
+  site: "https://dev.liamdsouza.com",
+  base: "/",
 });
