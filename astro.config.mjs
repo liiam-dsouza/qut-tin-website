@@ -8,5 +8,7 @@ export default defineConfig({
       plugins: [tailwindcss()],
   },
 
-  integrations: [icon()]
+  integrations: [icon()],
+  site: "https://liiam-dsouza.github.io",
+  base: "/qut-tin-website/",
 });
