@@ -1,0 +1,73 @@
+---
+import { Icon } from "astro-icon/components"
+
+import Button from "./Button.astro"
+import Wrapper from "./Wrapper.astro"
+
+const TICKET_TYPES = [
+    {
+        name: "Student Ticket",
+        price: "$20",
+        features: ["Event Access", "Food & Drinks", "Industry Networking", "Career Guide"],
+        buttonText: "Get Your Ticket"
+    },
+    {
+        name: "Industry Partner",
+        price: "Contact Us",
+        features: ["Company Booth", "Speaking Opportunity", "Talent Access", "Brand Exposure"],
+        buttonText: "Partner With Us",
+        highlighted: true
+    }
+]
+---
+
+<Wrapper id="tickets">
+    <div class="flex flex-col items-center mx-auto text-center">
+        <span class="text-orange-500 font-bold tracking-widest uppercase text-sm mb-4 block">Secure Your Spot</span>
+        <h2 class="font-black text-5xl sm:text-6xl">Choose Your Path</h2>
+        <p class="text-sm sm:text-lg max-w-2xl mx-auto my-4">
+            Join us for the most anticipated tech night of the year.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+        <div class="bg-white border-4 border-pink-500 rounded-3xl p-4 w-full hover:shadow-2xl hover:scale-105 transition-all">
+            <div class="mx-4 md:mx-8 my-2">
+                <h2 class="text-3xl font-extrabold mt-6">Student Ticket</h2>
+                <p class="text-4xl font-extrabold text-pink-500 my-2">$20</p>
+
+                <ul class="list-disc list-inside marker:text-pink-500 mt-4 my-8">
+                    <li class="mt-2">Event Access</li>
+                    <li class="mt-2">Food & Drinks</li>
+                    <li class="mt-2">Industry Networking</li>
+                    <li class="mt-2">Career Guide</li>
+                </ul>
+
+                <Button theme="pink" size="sm" variant="muted" rounding="rect">
+                    Get Your Ticket
+                </Button>
+            </div>
+        </div>
+
+        <div class="bg-white border-4 border-purple-500 rounded-3xl p-4 w-full hover:shadow-2xl hover:scale-105 transition-all relative">
+            <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-purple-500 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
+                Industry Only
+            </span>
+            <div class="mx-4 md:mx-8 my-2">
+                <h2 class="text-3xl font-extrabold mt-6">Industry Partner</h2>
+                <p class="text-4xl font-extrabold text-purple-500 my-2">Contact Us</p>
+
+                <ul class="list-disc list-inside marker:text-purple-500 mt-4 my-8">
+                    <li class="mt-2">Company Booth</li>
+                    <li class="mt-2">Speaking Opportunity</li>
+                    <li class="mt-2">Talent Access</li>
+                    <li class="mt-2">Brand Exposure</li>
+                </ul>
+
+                <Button theme="purple" size="sm" variant="filled" rounding="rect">
+                    Partner With Us
+                </Button>
+            </div>
+        </div>
+    </div>
+</Wrapper>

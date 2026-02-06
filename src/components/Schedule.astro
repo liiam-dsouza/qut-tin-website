@@ -1,0 +1,38 @@
+---
+const SCHEDULE = [
+    { time: '4:00 PM', title: 'Doors Open', desc: 'Check-in and early networking with student clubs.', category: 'Social' },
+    { time: '5:00 PM', title: 'Keynote Presentations', desc: 'The future of Tech in QLD: A talk by industry titans.', category: 'Talk' },
+    { time: '6:00 PM', title: 'Panel Q&A', desc: 'Ask your burning questions to industry speakers.', category: 'Q&A' },
+    { time: '7:00 PM', title: 'Networking & Food', desc: 'Chat with other attending industry and enjoy some food and beverages.', category: 'Networking' },
+]
+---
+
+<div class="container mx-auto max-w-4xl">
+	<div class="reveal-on-scroll text-center mb-16">
+		<h2 class="text-4xl md:text-5xl font-extrabold mb-4">
+			Event Schedule
+		</h2>
+		<p class="text-lg text-gray-600">
+			Plan your night to make the most of every opportunity.
+		</p>
+	</div>
+
+	<div class="relative border-l-2 border-pink-200 ml-4 md:ml-0">
+		{
+			SCHEDULE.map(item => (
+				<div class="relative pl-8 pb-12 group">
+					<div class="absolute -left-2.5 top-0 w-4 h-4 rounded-full bg-pink-500 ring-4 ring-white shadow-lg group-hover:scale-125 transition-transform" />
+					<div class="flex flex-col md:flex-row md:items-center gap-2 mb-2">
+						<span class="text-pink-500 font-bold text-lg">{item.time}</span>
+						<span class="hidden md:block text-gray-300 mx-2">•</span>
+						<span class="px-3 py-1 rounded-full bg-purple-50 text-purple-500 text-xs font-bold uppercase tracking-widest w-fit">
+							{item.category}
+						</span>
+					</div>
+					<h3 class="text-2xl font-bold mb-2">{item.title}</h3>
+					<p class="text-gray-600 leading-relaxed">{item.desc}</p>
+				</div>
+			))
+		}
+	</div>
+</div>

@@ -1,0 +1,143 @@
+---
+import Wrapper from "./Wrapper.astro";
+
+const PREP_CHECKLIST = [
+	{ id: "resume", label: "Resume/Portfolio QR Ready", icon: "📄" },
+	{ id: "pitch", label: "30-Second Elevator Pitch", icon: "🎤" },
+	{ id: "linkedin", label: "LinkedIn Profile Polished", icon: "🔗" },
+	{ id: "dress", label: "Smart Casual Outfit Ready", icon: "✨" },
+	{ id: "questions", label: "3 Questions for Employers", icon: "❓" },
+];
+---
+
+<Wrapper id="checklist">
+	<div class="container mx-auto max-w-4xl">
+		<div class="text-center mb-16 reveal-on-scroll">
+			<h2 class="text-4xl md:text-5xl font-extrabold mb-4">
+				Networking Survival Guide
+			</h2>
+			<p class="text-lg text-gray-600">
+				Prepare like a pro so you can focus on the conversations.
+			</p>
+		</div>
+
+		<div class="glass p-8 md:p-12 rounded-[3rem] shadow-2xl relative overflow-hidden">
+			<div class="grid md:grid-cols-2 gap-6">
+				<!-- Checklist -->
+				<div class="space-y-4">
+					{
+						PREP_CHECKLIST.map((item) => (
+							<button class="check-item w-full flex items-center p-4 rounded-2xl transition-all duration-300 border-2 border-transparent hover:border-gray-200" data-id={item.id}>
+								<span class="text-2xl mr-4">{item.icon}</span>
+                                <span class="font-bold grow text-left">{item.label}</span>
+
+								<div class="check-circle relative w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center transition-all duration-300 ease-out">
+									<svg class="checkmark w-4 h-4 text-white scale-0 opacity-0 transition-all duration-200 ease-out" fill="none" stroke="currentColor" viewBox="0 0 24 24" >
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+									</svg>
+								</div>
+							</button>
+						))
+					}
+				</div>
+
+				<!-- Progress Card -->
+				<div class="flex flex-col justify-center items-center text-center p-6" >
+					<div class="relative w-32 h-32 mb-6">
+						<svg class="w-full h-full -rotate-90">
+							<circle cx="64" cy="64" r="58" stroke="currentColor" stroke-width="8" fill="transparent" class="text-gray-200" />
+							<circle id="progress-ring" cx="64" cy="64" r="58" stroke="currentColor" stroke-width="8" fill="transparent" stroke-dasharray="364" stroke-dashoffset="364" class="text-pink-500 transition-all duration-1000 ease-out" />
+						</svg>
+
+						<div id="progress-text" class="absolute inset-0 flex items-center justify-center text-2xl font-black text-pink-500">
+							0%
+						</div>
+					</div>
+
+					<h3 class="text-xl font-bold mb-2">Ready to Impress?</h3>
+					<p id="progress-message" class="text-sm text-gray-500">
+						Keep preparing, you're almost ready to land that dream role.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</Wrapper>
+
+<script type="module" is:inline>
+	const STORAGE_KEY = "qut_tech_prep";
+	const TOTAL = document.querySelectorAll(".check-item").length;
+	const CIRCUMFERENCE = 364;
+
+	const buttons = document.querySelectorAll(".check-item");
+	const ring = document.getElementById("progress-ring");
+	const text = document.getElementById("progress-text");
+	const message = document.getElementById("progress-message");
+
+	let checked = new Set(
+		JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]"),
+	);
+
+	function updateUI() {
+		const progress = (checked.size / TOTAL) * 100;
+
+		// Progress ring
+		ring.style.strokeDashoffset =
+			CIRCUMFERENCE - (CIRCUMFERENCE * progress) / 100;
+
+		// Progress text
+		text.textContent = `${Math.round(progress)}%`;
+
+		// Progress message
+		message.textContent =
+			progress === 100
+				? "You're all set! Go kill it."
+				: "Keep preparing, you're almost ready to land that dream role.";
+
+		// Checklist items
+		buttons.forEach((btn) => {
+			const id = btn.dataset.id;
+			const active = checked.has(id);
+
+			const circle = btn.querySelector(".check-circle");
+			const check = btn.querySelector(".checkmark");
+
+			// Button animation
+			btn.classList.toggle("bg-pink-50", active);
+			btn.classList.toggle("border-pink-500", active);
+			btn.classList.toggle("text-pink-500", active);
+			btn.classList.toggle("bg-white/40", !active);
+			btn.classList.toggle("text-gray-700", !active);
+			btn.classList.toggle("-translate-y-1", active);
+			btn.classList.toggle("shadow-lg", active);
+
+			// Circle animation
+			circle.classList.toggle("bg-pink-500", active);
+			circle.classList.toggle("border-pink-500", active);
+			circle.classList.toggle("border-gray-300", !active);
+			circle.classList.toggle("scale-110", active);
+			circle.classList.toggle("scale-100", !active);
+
+			// Checkmark animation
+			check.classList.toggle("scale-100", active);
+			check.classList.toggle("opacity-100", active);
+			check.classList.toggle("scale-0", !active);
+			check.classList.toggle("opacity-0", !active);
+		});
+
+		// Persist state
+		localStorage.setItem(STORAGE_KEY, JSON.stringify([...checked]));
+	}
+
+	// Click handling
+	buttons.forEach((btn) => {
+		btn.addEventListener("click", () => {
+			const id = btn.dataset.id;
+			checked.has(id) ? checked.delete(id) : checked.add(id);
+			updateUI();
+		});
+	});
+
+	// Initial render
+	updateUI();
+</script>

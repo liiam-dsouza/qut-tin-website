@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import "tailwindcss";
+
+html, body {
+    color: #1f2937;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Nunito", sans-serif;
+}
+
+.gridpattern {
+	background-image: linear-gradient(#F1F1F1 1px, transparent 1px), linear-gradient(to right, #F1F1F1 1px, transparent 1px);
+	background-size: 20px 20px;
+	background-color: #FFFFFF;
+}

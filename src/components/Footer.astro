@@ -1,0 +1,42 @@
+---
+import { Icon } from "astro-icon/components"
+
+const socials = [
+    {
+        name: "Instagram",
+        icon: "brand-instagram",
+        href: "https://www.instagram.com/quttechindustrynight/",
+    },
+]
+---
+
+<div class="w-full p-12 border-t border-gray-200">
+    <div class="mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+        <div>
+            <h4 class="font-extrabold text-2xl mb-2 uppercase">
+                QUT <span class="text-pink-500">Tech Industry</span> Night 2026
+            </h4>
+            <p class="text-sm">Presented by the tech clubs of QUT.</p>
+        </div>
+        <div class="flex gap-8 text-sm font-semibold">
+            <a href="#" class="hover:text-pink-500 transition-colors">Contact</a>
+            <a href="#" class="hover:text-pink-500 transition-colors">Sponsorships</a>
+        </div>
+        <div class="flex gap-4">
+            {
+                socials.map(social => (
+                    <a href={ social.href } class="text-2xl size-5 rounded-full bg-gray-100 flex items-center justify-center hover:text-pink-500 transition-all">
+                        <span class="sr-only">{ social.name }</span>
+                        <div class="">
+                            <Icon name={`tabler:${ social.icon }`} />
+                        </div>
+                    </a>
+                ))
+            }
+        </div>
+    </div>
+
+    <div class="text-center mt-12 text-xs text-gray-800/50">
+        &copy; { new Date().getFullYear() } Queensland University of Technology Tech Industry Night. All rights reserved.
+    </div>
+</div>

@@ -1,0 +1,62 @@
+---
+import { Icon } from "astro-icon/components"
+
+import Button from "./Button.astro"
+import Wrapper from "./Wrapper.astro"
+---
+
+<Wrapper id="attending">
+    <div class="flex flex-col items-center mx-auto text-center">
+        <span class="text-orange-500 font-bold tracking-widest uppercase text-sm mb-4 block">The Value</span>
+        <h2 class="font-black text-5xl sm:text-6xl">Why Attend?</h2>
+        <p class="text-sm sm:text-lg max-w-2xl mx-auto my-4">
+            An ecosystem where academic excellence meets industry expertise.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+        <div class="bg-white border-l-12 border-4 border-pink-500 rounded-3xl p-4 w-full hover:shadow-2xl transition-all">
+            <div class="text-4xl text-pink-500 bg-pink-100 w-fit p-4 m-4 md:m-8 rounded-lg">
+                <Icon name="tabler:school" />
+            </div>
+            <div class="mx-4 md:mx-8 my-2">
+                <h2 class="text-3xl font-extrabold mb-2">For Students</h2>
+                <p>
+                    Kickstart your career by connecting with the people who are building the future. Don't just apply for jobs - build relationships.
+                </p>
+
+                <ul class="list-disc list-inside marker:text-pink-500 mt-4 my-8">
+                    <li class="mt-2">Network with top tech companies</li>
+                    <li class="mt-2">Discover internship and job opportunities</li>
+                    <li class="mt-2">Gain insights from industry leaders</li>
+                </ul>
+
+                <Button theme="pink" size="sm" variant="filled" rounding="pill">
+                    Get Your Ticket
+                </Button>
+            </div>
+        </div>
+
+        <div class="bg-white border-l-12 border-4 border-purple-500 rounded-3xl p-4 w-full hover:shadow-2xl transition-all">
+            <div class="text-4xl text-purple-500 bg-purple-100 w-fit p-4 m-4 md:m-8 rounded-lg">
+                <Icon name="tabler:briefcase" />
+            </div>
+            <div class="mx-4 md:mx-8 my-2">
+                <h2 class="text-3xl font-extrabold mb-2">For Industry</h2>
+                <p>
+                    Identify and recruit high-potential talent before they even graduate. Position your brand as a leader in the QUT tech community.
+                </p>
+
+                <ul class="list-disc list-inside marker:text-purple-500 mt-4 my-8">
+                    <li class="mt-2">Showcase your company to top students</li>
+                    <li class="mt-2">Access a diverse pool of emerging talent</li>
+                    <li class="mt-2">Build lasting relationships with future talent</li>
+                </ul>
+
+                <Button theme="purple" size="sm" variant="filled" rounding="pill">
+                    Partner With Us
+                </Button>
+            </div>
+        </div>
+    </div>
+</Wrapper>

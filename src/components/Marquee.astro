@@ -1,0 +1,37 @@
+---
+const PARTNERS = [
+    "Google",
+    "Atlassian",
+    "Canva",
+    "SafetyCulture",
+    "TechnologyOne",
+    "Suncorp",
+    "Boeing",
+    "Data61"
+]
+---
+
+<div class="py-12 bg-white/30 border-y backdrop-blur-lg border-neutral-200/30 shadow-sm overflow-hidden">
+    <div class="container mx-auto px-6 mb-8 text-center">
+        <span class="text-orange-500 font-bold tracking-widest uppercase text-sm mb-4 block">Industry Attendees</span>
+    </div>
+    <div class="flex whitespace-nowrap animate-marquee">
+        {
+            [...PARTNERS, ...PARTNERS].map(partner => (
+                <div class="mx-12 text-3xl md:text-5xl font-extrabold hover:text-pink-500 transition-colors cursor-default select-none">
+                    { partner }
+                </div>
+            ))
+        }
+    </div>
+    <style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: inline-flex;
+            animation: marquee 30s linear infinite;
+        }
+    </style>
+</div>
