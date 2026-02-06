@@ -1,0 +1,55 @@
+---
+import { Icon } from "astro-icon/components"
+import Wrapper from "./Wrapper.astro"
+---
+
+<Wrapper id="testimonials">
+    <div class="flex flex-col items-center mx-auto text-center">
+        <span class="text-orange-500 font-bold tracking-widest uppercase text-sm mb-4 block">Testimonials</span>
+        <h2 class="font-black text-5xl sm:text-6xl">What Our Community Says</h2>
+        <p class="text-sm sm:text-lg max-w-2xl mx-auto my-4">
+            Real stories from the attendees who made last year's event unforgettable.
+        </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 my-8">
+        <div class="p-10 rounded-4xl relative group transition-all duration-500 hover:-translate-y-4 shadow-2xl border-t-4 border-t-pink-500">
+            <div class="absolute -top-6 left-10 w-12 h-12 rounded-2xl flex items-center justify-center text-white shadow-lg bg-pink-500">
+                <span class="text-3xl flex flex-col items-center justify-center"><Icon name="tabler:quote-filled" /></span>
+            </div>
+
+            <div class="mt-4 mb-10 italic text-xl leading-relaxed font-medium">
+                I landed my dream internship at Atlassian just two weeks after meeting their lead recruiter at Industry Night. The atmosphere is electric!
+            </div>
+
+            <div class="font-extrabold">Liam D'Souza</div>
+            <div class="text-sm text-gray-500 font-semibold">Student, QUT</div>
+        </div>
+
+        <div class="p-10 rounded-4xl relative group transition-all duration-500 hover:-translate-y-4 shadow-2xl border-t-4 border-t-orange-500">
+            <div class="absolute -top-6 left-10 w-12 h-12 rounded-2xl flex items-center justify-center text-white shadow-lg bg-orange-500">
+                <span class="text-3xl flex flex-col items-center justify-center"><Icon name="tabler:quote-filled" /></span>
+            </div>
+
+            <div class="mt-4 mb-10 italic text-xl leading-relaxed font-medium">
+                The quality of talent at QUT never ceases to amaze me. We met several students who were already building industry-grade platforms in their spare time.
+            </div>
+
+            <div class="font-extrabold">Vinesh Nangia</div>
+            <div class="text-sm text-gray-500 font-semibold">Hiring Manager, PwC</div>
+        </div>
+
+        <div class="p-10 rounded-4xl relative group transition-all duration-500 hover:-translate-y-4 shadow-2xl border-t-4 border-t-purple-500">
+            <div class="absolute -top-6 left-10 w-12 h-12 rounded-2xl flex items-center justify-center text-white shadow-lg bg-purple-500">
+                <span class="text-3xl flex flex-col items-center justify-center"><Icon name="tabler:quote-filled" /></span>
+            </div>
+
+            <div class="mt-4 mb-10 italic text-xl leading-relaxed font-medium">
+                It's the highlight of the academic year. Seeing students pitch their innovations directly to CEOs is exactly why we do what we do.
+            </div>
+
+            <div class="font-extrabold">Kevin Flannagan</div>
+            <div class="text-sm text-gray-500 font-semibold">President, QUT LITS</div>
+        </div>
+    </div>
+</Wrapper>

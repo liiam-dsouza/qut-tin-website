@@ -20,5 +20,12 @@ const { title, description } = Astro.props
             <slot />
         </main>
         <Footer />
+
+        <script>
+            import AOS from 'aos'
+            import 'aos/dist/aos.css'
+
+            AOS.init({ once: true })
+        </script>
 	</body>
 </html>

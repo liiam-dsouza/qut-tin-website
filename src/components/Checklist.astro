@@ -2,26 +2,25 @@
 import Wrapper from "./Wrapper.astro";
 
 const PREP_CHECKLIST = [
-	{ id: "resume", label: "Resume/Portfolio QR Ready", icon: "📄" },
+	{ id: "resume", label: "Resume/Portfolio QR Code", icon: "📄" },
 	{ id: "pitch", label: "30-Second Elevator Pitch", icon: "🎤" },
-	{ id: "linkedin", label: "LinkedIn Profile Polished", icon: "🔗" },
-	{ id: "dress", label: "Smart Casual Outfit Ready", icon: "✨" },
+	{ id: "linkedin", label: "Polished LinkedIn Profile", icon: "🔗" },
+	{ id: "dress", label: "Smart Casual Outfit", icon: "✨" },
 	{ id: "questions", label: "3 Questions for Employers", icon: "❓" },
 ];
 ---
 
 <Wrapper id="checklist">
 	<div class="container mx-auto max-w-4xl">
-		<div class="text-center mb-16 reveal-on-scroll">
-			<h2 class="text-4xl md:text-5xl font-extrabold mb-4">
-				Networking Survival Guide
-			</h2>
-			<p class="text-lg text-gray-600">
-				Prepare like a pro so you can focus on the conversations.
-			</p>
-		</div>
+		<div class="flex flex-col items-center mx-auto text-center">
+            <span class="text-orange-500 font-bold tracking-widest uppercase text-sm mb-4 block">Get Prepared</span>
+            <h2 class="font-black text-5xl sm:text-6xl">Networking Survival Guide</h2>
+            <p class="text-sm sm:text-lg max-w-2xl mx-auto my-4">
+                Prepare like a pro so you can focus on the conversations.
+            </p>
+        </div>
 
-		<div class="glass p-8 md:p-12 rounded-[3rem] shadow-2xl relative overflow-hidden">
+		<div class="glass p-8 md:p-12 rounded-[3rem] bg-white shadow-2xl relative overflow-hidden">
 			<div class="grid md:grid-cols-2 gap-6">
 				<!-- Checklist -->
 				<div class="space-y-4">
@@ -45,7 +44,7 @@ const PREP_CHECKLIST = [
 				<div class="flex flex-col justify-center items-center text-center p-6" >
 					<div class="relative w-32 h-32 mb-6">
 						<svg class="w-full h-full -rotate-90">
-							<circle cx="64" cy="64" r="58" stroke="currentColor" stroke-width="8" fill="transparent" class="text-gray-200" />
+							<circle cx="64" cy="64" r="58" stroke="currentColor" stroke-width="8" fill="transparent" class="text-pink-200" />
 							<circle id="progress-ring" cx="64" cy="64" r="58" stroke="currentColor" stroke-width="8" fill="transparent" stroke-dasharray="364" stroke-dashoffset="364" class="text-pink-500 transition-all duration-1000 ease-out" />
 						</svg>
 

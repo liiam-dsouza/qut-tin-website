@@ -1,0 +1,109 @@
+---
+import Wrapper from "./Wrapper.astro"
+
+const FAQS = [
+	{
+		q: "What is the dress code?",
+		a: "Smart Casual is recommended. Think 'first interview' or professional workplace attire.",
+	},
+	{
+		q: "Do I need to bring a resume?",
+		a: "While not required, having a digital portfolio (QR code) or a few physical copies is highly recommended!",
+	},
+	{
+		q: "Is food provided?",
+		a: "Yes! Canapés and drinks are included with your ticket.",
+	},
+];
+---
+
+<Wrapper id="faq">
+	<div class="container mx-auto max-w-3xl">
+		<div class="text-center mb-16">
+			<h2 class="text-4xl md:text-5xl font-extrabold mb-4">
+				Common Questions
+			</h2>
+			<p class="text-lg text-gray-600">
+				Everything you need to know before you arrive.
+			</p>
+		</div>
+
+		<div class="space-y-4" id="faq-list">
+			{
+				FAQS.map((faq, idx) => (
+					<div class="glass rounded-2xl overflow-hidden transition-all duration-300 border-neutral-200 border-2 hover:border-pink-500">
+						<button
+							class="w-full p-6 text-left flex justify-between items-center group faq-btn"
+							data-index={idx}
+						>
+							<span class="font-bold text-lg transition-colors">
+								{faq.q}
+							</span>
+							<span class="toggle-icon transform transition-transform duration-300 group-hover:text-pink-500">
+								<svg
+									class="w-6 h-6"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M12 4v16m8-8H4"
+									/>
+								</svg>
+							</span>
+						</button>
+						<div class="faq-answer overflow-hidden transition-all duration-300 max-h-0">
+							<p class="p-6 pt-0 text-gray-700 leading-relaxed border-t border-white/20">
+								{faq.a}
+							</p>
+						</div>
+					</div>
+				))
+			}
+		</div>
+	</div>
+
+	<script type="module" is:inline>
+		let openIdx = null;
+
+		const faqList = document.getElementById("faq-list");
+		const buttons = faqList.querySelectorAll(".faq-btn");
+
+		buttons.forEach((button) => {
+			button.addEventListener("click", (event) => {
+				const btn = event.currentTarget;
+				const idx = Number(btn.dataset.index);
+				const answer = btn.nextElementSibling;
+				const icon = btn.querySelector(".toggle-icon");
+
+				// Close currently open FAQ
+				if (openIdx !== null && openIdx !== idx) {
+					const openButton = faqList.querySelector(
+						`[data-index="${openIdx}"]`,
+					);
+					const openAnswer = openButton.nextElementSibling;
+					const openIcon = openButton.querySelector(".toggle-icon");
+					openAnswer.classList.remove("max-h-[1000px]");
+					openAnswer.classList.add("max-h-0");
+					openIcon.classList.remove("rotate-45");
+				}
+
+				// Toggle clicked FAQ
+				if (openIdx === idx) {
+					answer.classList.remove("max-h-[1000px]");
+					answer.classList.add("max-h-0");
+					icon.classList.remove("rotate-45");
+					openIdx = null;
+				} else {
+					answer.classList.remove("max-h-0");
+					answer.classList.add("max-h-[1000px]");
+					icon.classList.add("rotate-45");
+					openIdx = idx;
+				}
+			});
+		});
+	</script>
+</Wrapper>
