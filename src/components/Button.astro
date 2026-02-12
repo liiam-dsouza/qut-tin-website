@@ -1,6 +1,6 @@
 ---
 interface Props {
-  theme: "pink" | "purple"
+  theme: "pink" | "purple" | "orange"
   size?: "sm" | "lg"
   variant?: "filled" | "outlined" | "muted"
   rounding?: "rect" | "pill"
@@ -38,6 +38,11 @@ const themes = {
         filled: "bg-purple-500 text-white hover:bg-purple-600 focus:ring-purple-500",
         outlined: "border-2 border-purple-500 text-purple-500 hover:bg-purple-50 focus:ring-purple-500",
         muted: "bg-purple-100 text-purple-500 hover:bg-purple-200 focus:ring-purple-500",
+    },
+    orange: {
+        filled: "bg-orange-500 text-white hover:bg-orange-600 focus:ring-orange-500",
+        outlined: "border-2 border-orange-500 text-orange-500 hover:bg-orange-50 focus:ring-orange-500",
+        muted: "bg-orange-100 text-orange-500 hover:bg-orange-200 focus:ring-orange-500",
     },
 } as const
 
