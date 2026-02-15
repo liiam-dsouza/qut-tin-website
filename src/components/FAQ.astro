@@ -8,7 +8,7 @@ const FAQS = [
 	},
 	{
 		q: "Do I need to bring a resume?",
-		a: "While not required, having a digital portfolio (QR code) or a few physical copies is highly recommended!",
+		a: "While not required, having a digital portfolio (QR code) or a polished LinkedIn profile is highly recommended!",
 	},
 	{
 		q: "Is food provided?",
@@ -19,14 +19,13 @@ const FAQS = [
 
 <Wrapper id="faq">
 	<div class="container mx-auto max-w-3xl">
-		<div class="text-center mb-16">
-			<h2 class="text-4xl md:text-5xl font-extrabold mb-4">
-				Common Questions
-			</h2>
-			<p class="text-lg text-gray-600">
+        <div class="flex flex-col items-center mx-auto text-center">
+            <span class="text-orange-500 font-bold tracking-widest uppercase text-sm mb-4 block">Be In The Know</span>
+            <h2 class="font-black text-5xl sm:text-6xl">FAQs</h2>
+            <p class="text-sm sm:text-lg max-w-2xl mx-auto my-4">
 				Everything you need to know before you arrive.
-			</p>
-		</div>
+            </p>
+        </div>
 
 		<div class="space-y-4" id="faq-list">
 			{
@@ -56,7 +55,7 @@ const FAQS = [
 							</span>
 						</button>
 						<div class="faq-answer overflow-hidden transition-all duration-300 max-h-0">
-							<p class="p-6 pt-0 text-gray-700 leading-relaxed border-t border-white/20">
+							<p class="p-6 pt-0 text-gray-700 leading-relaxed">
 								{faq.a}
 							</p>
 						</div>

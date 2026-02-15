@@ -7,7 +7,7 @@ import Wrapper from "./Wrapper.astro"
     <div>
         <h1 class="text-[11.67vw] leading-none sm:text-8xl font-extrabold">
             Bridge the Gap.<br>
-            <span class=" text-transparent bg-clip-text w-fit bg-linear-to-r from-pink-500 via-purple-500 to-orange-500">Own the Future.</span>
+            <span class="highlight">Own the Future.</span>
         </h1>
 
         <p class="my-4 sm:text-xl sm:max-w-2xl">
@@ -16,10 +16,11 @@ import Wrapper from "./Wrapper.astro"
     </div>
 
     <div class="flex flex-col sm:flex-row gap-4">
-        <Button theme="pink" size="lg" variant="filled" rounding="pill">
+        <Button link="https://events.humanitix.com/qut-tech-industry-night-2026/tickets?widget=popup" theme="pink" size="lg" variant="filled" rounding="pill">
             Get Your Ticket
         </Button>
-        <Button theme="purple" size="lg" variant="outlined" rounding="pill">
+
+        <Button link="mailto:industry@techindustrynight.com" theme="purple" size="lg" variant="outlined" rounding="pill">
             Industry Partnerships
         </Button>
     </div>

@@ -19,3 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 	background-size: 20px 20px;
 	background-color: #FFFFFF;
 }
+
+.highlight {
+    @apply text-transparent bg-clip-text w-fit bg-linear-to-r from-pink-500 via-purple-500 to-orange-500;
+}

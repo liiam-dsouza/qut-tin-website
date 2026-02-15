@@ -5,9 +5,9 @@ import Button from "./Button.astro"
 <nav class={`px-6 py-3 fixed w-full z-50 transition-all duration-300 bg-white shadow-md`}>
 	<div class="flex justify-between items-center">
 		<a href="#" class="flex items-center space-x-2">
-			<div class="w-8 h-8 rounded-full bg-linear-to-br from-pink-500 via-purple-500 to-orange-600" />
+			<img src="/logo.svg" alt="QUT Tech Industry Night Logo" class="size-12" />
 			<span class="font-extrabold text-xl tracking-tighter">
-				QUT <span class="text-pink-500">TECH INDUSTRY</span> NIGHT
+				QUT <span class="highlight">TECH INDUSTRY NIGHT</span>
 			</span>
 		</a>
 
@@ -30,7 +30,7 @@ import Button from "./Button.astro"
             <a href="#" class="text-sm font-semibold hover:text-pink-500 transition-colors duration-200">Ticketing</a>
 		</div>
 
-		<Button theme="pink" size="sm" variant="filled" rounding="pill">
+		<Button link="https://events.humanitix.com/qut-tech-industry-night-2026/tickets?widget=popup" theme="pink" size="sm" variant="filled" rounding="pill">
             Get Tickets
         </Button>
 	</div>
