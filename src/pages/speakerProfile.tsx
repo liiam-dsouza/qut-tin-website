@@ -1,9 +1,8 @@
-// src/pages/SpeakerProfile.tsx
+import SEO from "@/components/SEO"
 import { useParams, Link, Navigate } from "react-router-dom"
 import { motion } from "framer-motion"
 import { ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
-// import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { speakers } from "@/data/speakers"
 import { fadeUpContainer, fadeUpItem } from "@/lib/animations"
@@ -17,6 +16,10 @@ function SpeakerProfile() {
 
   return (
     <div className="min-h-screen bg-background mt-16">
+		<SEO
+			title={`${speaker.name} — Speaker`}
+			url={`/speakers/${speaker.id}`}
+		/>
       {/* Back button */}
       <div className="max-w-4xl mx-auto px-6 pt-8">
         <Button variant="ghost" className="-ml-3">

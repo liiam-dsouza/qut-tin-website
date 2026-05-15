@@ -1,4 +1,4 @@
-
+import SEO from "@/components/SEO"
 import Hero from "@/components/Hero"
 import ValueProps from "@/components/ValueProps"
 import Speakers from "@/components/Speakers"
@@ -12,6 +12,7 @@ import Tickets from "@/components/Tickets"
 function Home() {
   	return(
 		<>
+			<SEO url="/" />
 			<Hero />
 			<ValueProps />
 			<Schedule />
