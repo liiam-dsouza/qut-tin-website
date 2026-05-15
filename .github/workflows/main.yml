@@ -36,7 +36,9 @@ jobs:
           version: latest
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: |
+          pnpm approve-builds msw || true
+          pnpm install --frozen-lockfile
 
       - name: Build
         run: pnpm run build
