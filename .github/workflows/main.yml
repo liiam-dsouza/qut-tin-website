@@ -36,7 +36,9 @@ jobs:
           version: latest
 
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: |
+          pnpm config set ignore-scripts true
+          pnpm install --no-frozen-lockfile
 
       - name: Build
         run: pnpm run build
