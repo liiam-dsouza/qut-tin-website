@@ -18,7 +18,7 @@ export const speakers: Speaker[] = [
 			"Mia Wheatley is a Junior Information Security Architect at Queensland University of Technology, where her work focuses on security architecture design and design review across enterprise initiatives. A recent QUT Computer Science graduate, she has spent several years working within a large, complex university environment and is building her expertise at the intersection of security strategy and practical implementation.",
 			"Alongside her professional role, she has served on the executive of Women in Technology at QUT for over two years, and currently holds the Alumni Liaison role - working to keep graduates connected to the community they came from. She enjoys mentoring students who are exploring pathways into cybersecurity."
 		],
-		photo: "/speakers/Mia-Wheatley.jpg",
+		photo: "/speakers/mia-wheatley.png",
 		linkedin: "https://www.linkedin.com/in/mia-wheatley/",
 	},
 	{
@@ -32,7 +32,7 @@ export const speakers: Speaker[] = [
 			"Since 2000 he has incubated, developed and sold multiple small ICT Technology firms from the ground up in Datacentres, Webhosting, ISP and Ecommerce and has extensive practical commercial experience alongside his technical expertise.",
 			"Sean is recognised as an Experienced Dev Ops Software Engineer, Solutions Architect, Internet Network Engineer, Commercial Hosting provider and a Mining and Defence Secure ICT Platform Engineer."
 		],
-		photo: "/speakers/Sean-Finn.jpeg",
+		photo: "/speakers/sean-finn.png",
     	linkedin: "https://www.linkedin.com/in/seanfinn/",
 	}
 ] as const
