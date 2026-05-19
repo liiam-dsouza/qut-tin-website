@@ -84,6 +84,7 @@ function SpeakerProfile() {
           <div className="grid sm:grid-cols-2 gap-4">
             {speakers
               .filter((s) => s.id !== speaker.id)
+			  .sort((a, b) => a.name.localeCompare(b.name))
               .map((s) => (
                 <Link
                   key={s.id}

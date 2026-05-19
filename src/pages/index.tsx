@@ -1,5 +1,6 @@
 import SEO from "@/components/SEO"
 import Hero from "@/components/Hero"
+import Stats from "@/components/Stats"
 import ValueProps from "@/components/ValueProps"
 import Speakers from "@/components/Speakers"
 import Organisers from "@/components/Organisers"
@@ -14,6 +15,7 @@ function Home() {
 		<>
 			<SEO url="/" />
 			<Hero />
+			<Stats />
 			<ValueProps />
 			<Schedule />
 			<Speakers />

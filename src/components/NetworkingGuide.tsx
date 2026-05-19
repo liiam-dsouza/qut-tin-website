@@ -2,13 +2,14 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Check } from "lucide-react"
 import { fadeUpContainer, fadeUpItem } from "@/lib/animations"
+import { Link } from "react-router-dom"
 
 const checklist = [
-  { id: "resume",    label: "Resume / Portfolio QR Code", emoji: "📄" },
-  { id: "pitch",     label: "30-Second Elevator Pitch",   emoji: "🎤" },
-  { id: "linkedin",  label: "Polished LinkedIn Profile",  emoji: "🔗" },
-  { id: "outfit",    label: "Smart Casual Outfit",        emoji: "✨" },
-  { id: "questions", label: "3 Questions for Employers",  emoji: "❓" },
+  { id: "resume",    label: "Resume / Portfolio QR Code", emoji: "📄", href: "/qr-generator" },
+  { id: "pitch",     label: "30-Second Elevator Pitch",   emoji: "🎤", href: undefined },
+  { id: "linkedin",  label: "Polished LinkedIn Profile",  emoji: "🔗", href: undefined },
+  { id: "outfit",    label: "Smart Casual Outfit",        emoji: "✨", href: undefined },
+  { id: "questions", label: "3 Questions for Employers",  emoji: "❓", href: undefined },
 ]
 
 const statusMessages: Record<number, { title: string; subtitle: string }> = {
@@ -84,9 +85,19 @@ function NetworkingGuide() {
                 >
                   <div className="flex items-center gap-3">
                     <span className="text-xl">{item.emoji}</span>
-                    <span className="font-heading font-semibold text-sm transition-colors duration-200 text-foreground">
-                      {item.label}
-                    </span>
+                    {item.href ? (
+						<Link
+							to={item.href}
+							className="font-heading font-semibold text-sm text-primary hover:underline transition-colors"
+							onClick={(e) => e.stopPropagation()}
+						>
+							{item.label}
+						</Link>
+						) : (
+						<span className="font-heading font-semibold text-sm text-foreground">
+							{item.label}
+						</span>
+					)}
                   </div>
 
                   <div

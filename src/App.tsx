@@ -9,6 +9,7 @@ import Sponsors from "@/pages/sponsorsPage"
 import Tickets from "@/pages/tickets"
 import Terms from "@/pages/terms"
 import Privacy from "@/pages/privacy"
+import QRGenerator from "@/pages/qrCodeGenerator"
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 						<Route index element={<Home />} />
 						<Route path="/speaker/:id" element={<SpeakerProfile />} />
 						<Route path="/sponsors" element={<Sponsors />} />
+						<Route path="/qr-generator" element={<QRGenerator />} />
 						<Route path="/tickets" element={<Tickets />} />
 						<Route path="/terms" element={<Terms />} />
 						<Route path="/privacy" element={<Privacy />} />

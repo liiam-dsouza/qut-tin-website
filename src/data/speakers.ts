@@ -34,5 +34,17 @@ export const speakers: Speaker[] = [
 		],
 		photo: "/speakers/sean-finn.png",
     	linkedin: "https://www.linkedin.com/in/seanfinn/",
+	},
+	{
+		id: "philip-fraser",
+		name: "Philip Fraser",
+		title: "Engineering Manager",
+		company: "Tanda",
+		bio: [
+			"Philip is the Engineering Manager at Tanda, a Brisbane-based B2B SaaS company building workforce management software used by thousands of businesses to run time and attendance, payroll, and HR for their frontline teams.",
+			"He leads a group of engineering teams working on a Rails monolith that ships to production continuously. His focus is on building teams that move fast, ship often, and stay close to the customers they're building for - and lately, on figuring out where AI fits into how they do that day-to-day.",
+		],
+		photo: "/speakers/philip-fraser.png",
+		linkedin: "https://www.linkedin.com/in/philip-fraser/",
 	}
 ] as const

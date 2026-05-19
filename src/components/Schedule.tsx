@@ -1,8 +1,10 @@
+import { useState } from "react"
 import { motion } from "framer-motion"
-import { fadeUpContainer, fadeUpItem } from "@/lib/animations"
-
+import { ChevronRight } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
-import { schedule, sessionTypeLabels, type SessionType } from "@/data/schedule"
+import { SessionModal } from "@/components/SessionModal"
+import { schedule, sessionTypeLabels, type ScheduleItem, type SessionType } from "@/data/schedule"
+import { fadeUpContainer, fadeUpItem } from "@/lib/animations"
 
 const sessionTypeColors: Record<SessionType, string> = {
   social:     "bg-brand-purple/10 text-brand-purple border-brand-purple/20",
@@ -21,6 +23,8 @@ const sessionTypeDot: Record<SessionType, string> = {
 }
 
 function Schedule() {
+  const [selectedItem, setSelectedItem] = useState<ScheduleItem | null>(null)
+
   return (
     <section id="schedule" className="py-24 px-6">
       <motion.div
@@ -44,52 +48,69 @@ function Schedule() {
         </motion.div>
 
         {/* Timeline */}
-        <motion.div
-          variants={fadeUpContainer}
-          className="flex flex-col"
-        >
+        <motion.div variants={fadeUpContainer} className="flex flex-col">
           {schedule.map((item, index) => (
             <motion.div
               key={item.id}
               variants={fadeUpItem}
               className="flex gap-6"
             >
-              {/* Time column */}
+              {/* Time */}
               <div className="w-20 shrink-0 text-sm text-muted-foreground pt-5 tabular-nums text-right">
                 {item.time}
               </div>
 
-              {/* Timeline spine */}
+              {/* Spine */}
               <div className="flex flex-col items-center">
-                {/* Dot */}
                 <div className={`mt-5 h-3 w-3 rounded-full shrink-0 ring-2 ring-background ${sessionTypeDot[item.type]}`} />
-                {/* Vertical line */}
                 {index < schedule.length - 1 && (
                   <div className="flex-1 w-px bg-border mt-1" />
                 )}
               </div>
 
               {/* Content */}
-              <div className="flex flex-col gap-2 flex-1 py-4 pb-8">
-                <div className="flex items-center gap-2 flex-wrap">
-                  <h3 className="font-heading font-semibold">{item.title}</h3>
-                  <Badge
-                    variant="outline"
-                    className={`text-xs ${sessionTypeColors[item.type]}`}
-                  >
-                    {sessionTypeLabels[item.type]}
-                  </Badge>
+              <div
+                onClick={() => item.expandable && setSelectedItem(item)}
+                className={`flex items-start justify-between gap-2 flex-1 py-4 pb-8 ${
+                  item.expandable
+                    ? "cursor-pointer group"
+                    : ""
+                }`}
+              >
+                <div className="flex flex-col gap-2">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <h3 className={`font-heading font-semibold transition-colors duration-200 ${
+                      item.expandable ? "group-hover:text-primary" : ""
+                    }`}>
+                      {item.title}
+                    </h3>
+                    <Badge
+                      variant="outline"
+                      className={`text-xs ${sessionTypeColors[item.type]}`}
+                    >
+                      {sessionTypeLabels[item.type]}
+                    </Badge>
+                  </div>
+                  {item.description && (
+                    <p className="text-sm text-muted-foreground">
+                      {item.description}
+                    </p>
+                  )}
                 </div>
-                {item.description && (
-                  <p className="text-sm text-muted-foreground">
-                    {item.description}
-                  </p>
+                {item.expandable && (
+                  <ChevronRight className="size-4 text-muted-foreground shrink-0 mt-1 transition-transform duration-150 group-hover:translate-x-2" />
                 )}
               </div>
             </motion.div>
           ))}
         </motion.div>
       </motion.div>
+
+      <SessionModal
+        item={selectedItem}
+        open={!!selectedItem}
+        onClose={() => setSelectedItem(null)}
+      />
     </section>
   )
 }
