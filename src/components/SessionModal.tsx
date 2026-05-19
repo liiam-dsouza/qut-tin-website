@@ -11,7 +11,7 @@ import {
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { type ScheduleItem, sessionTypeLabels } from "@/data/schedule"
-import { speakers } from "@/data/speakers"
+import { type Speaker, speakers } from "@/data/speakers"
 
 const sessionTypeColors: Record<string, string> = {
   social:     "bg-brand-purple/10 text-brand-purple border-brand-purple/20",
@@ -31,8 +31,9 @@ export function SessionModal({ item, open, onClose }: SessionModalProps) {
   if (!item) return null
 
   const sessionSpeakers = item.speakers
-    ?.map((id) => speakers.find((s) => s.id === id))
-    .filter(Boolean)
+	?.map((id) => speakers.find((s) => s.id === id))
+	.filter((s): s is Speaker => s !== undefined)
+	.sort((a, b) => a.name.localeCompare(b.name))
 
   return (
     <Dialog open={open} onOpenChange={(o) => !o && onClose()}>
@@ -68,7 +69,7 @@ export function SessionModal({ item, open, onClose }: SessionModalProps) {
                 {sessionSpeakers.length === 1 ? "Speaker" : "Speakers"}
               </p>
               <div className="flex flex-col gap-2">
-                {sessionSpeakers.sort((a, b) => a.name.localeCompare(b.name)).map((speaker) => (
+                {sessionSpeakers.map((speaker) => (
                   <Link
                     key={speaker!.id}
                     to={`/speakers/${speaker!.id}`}
