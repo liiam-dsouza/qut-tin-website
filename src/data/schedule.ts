@@ -33,7 +33,7 @@ export const schedule: ScheduleItem[] = [
 		time: "4:10 PM",
 		type: "talk",
 		title: "Keynote Presentation 1",
-		description: "TBC. Stay tuned!",
+		description: "We're putting the finishing touches on our first keynote - an industry leader with a story worth hearing. Stay tuned for the full announcement coming soon, and keep an eye on our socials so you don't miss the reveal.",
 		durationMins: 20,
 	},
 	{
@@ -41,7 +41,7 @@ export const schedule: ScheduleItem[] = [
 		time: "4:30 PM",
 		type: "talk",
 		title: "Keynote Presentation 2",
-		description: "TBC. Stay tuned!",
+		description: "Our second keynote speaker is being confirmed and we can't wait to share who it is. Watch this space for an announcement dropping soon - this is one session you'll want to have on your radar.",
 		durationMins: 20,
 	},
 	{
