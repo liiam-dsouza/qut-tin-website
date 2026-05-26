@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Check } from "lucide-react"
+import { Check, ChevronRight } from "lucide-react"
 import { fadeUpContainer, fadeUpItem } from "@/lib/animations"
 import { Link } from "react-router-dom"
 
@@ -83,15 +83,16 @@ function NetworkingGuide() {
                       : "bg-card border-border hover:border-primary/30 hover:bg-muted/30"
                   }`}
                 >
-                  <div className="flex items-center gap-3">
+                  <div className="flex items-center justify-center gap-3">
                     <span className="text-xl">{item.emoji}</span>
                     {item.href ? (
 						<Link
 							to={item.href}
-							className="font-heading font-semibold text-sm text-primary hover:underline transition-colors"
+							className="font-heading font-semibold text-sm text-primary hover:underline transition-colors group flex items-center justify-center gap-2"
 							onClick={(e) => e.stopPropagation()}
 						>
 							{item.label}
+							<ChevronRight className="size-4 text-muted-foreground shrink-0 mt-1 transition-transform duration-150 group-hover:translate-x-2" />
 						</Link>
 						) : (
 						<span className="font-heading font-semibold text-sm text-foreground">

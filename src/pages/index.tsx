@@ -15,7 +15,7 @@ function Home() {
 		<>
 			<SEO url="/" />
 			<Hero />
-			<Stats />
+			{/* <Stats /> */}
 			<ValueProps />
 			<Schedule />
 			<Speakers />

@@ -37,7 +37,7 @@ export function SessionModal({ item, open, onClose }: SessionModalProps) {
 
   return (
     <Dialog open={open} onOpenChange={(o) => !o && onClose()}>
-      <DialogContent className="w-full">
+      <DialogContent className="sm:max-w-2xl!">
         <DialogHeader className="gap-3">
           <div className="flex items-center gap-2 flex-wrap">
             <Badge
@@ -70,28 +70,31 @@ export function SessionModal({ item, open, onClose }: SessionModalProps) {
               </p>
               <div className="flex flex-col gap-2">
                 {sessionSpeakers.map((speaker) => (
-                  <Link
-                    key={speaker!.id}
-                    to={`/speakers/${speaker!.id}`}
-                    onClick={onClose}
-                    className="flex items-center gap-3 p-3 rounded-xl border border-border hover:border-primary/40 hover:bg-muted/30 transition-all group"
-                  >
-                    <img
-                      src={speaker!.photo}
-                      alt={speaker!.name}
-                      className="h-10 w-10 rounded-full object-cover object-top shrink-0"
-                    />
-                    <div className="flex flex-col gap-0.5 flex-1 min-w-0">
-                      <span className="font-heading font-semibold text-sm truncate">
-                        {speaker!.name}
-                      </span>
-                      <span className="text-xs text-muted-foreground truncate">
-                        {speaker!.title} @ {speaker!.company}
-                      </span>
-                    </div>
-                    <ArrowRight className="size-4 text-muted-foreground shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </Link>
-                ))}
+					<Link
+						key={speaker!.id}
+						to={`/speaker/${speaker!.id}`}
+						onClick={onClose}
+						className="flex items-center gap-3 p-3 rounded-xl border border-border hover:border-primary/40 hover:bg-muted/30 transition-all group"
+					>
+						<img
+						src={speaker!.photo}
+						alt={speaker!.name}
+						className="h-10 w-10 rounded-full object-cover object-top shrink-0"
+						/>
+						<div className="flex flex-col gap-0.5 flex-1 min-w-0">
+						<span className="font-heading font-semibold text-sm wrap-break-wordx">
+							{speaker!.name}
+						</span>
+						<span className="text-xs text-muted-foreground wrap-break-word">
+							{speaker!.title}
+						</span>
+						<span className="text-xs text-muted-foreground wrap-break-word">
+							{speaker!.company}
+						</span>
+						</div>
+						<ArrowRight className="size-4 text-muted-foreground shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
+					</Link>
+				))}
               </div>
             </div>
           </>

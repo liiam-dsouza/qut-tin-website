@@ -43,9 +43,9 @@ function StatItem({ stat, start }: { stat: Stat; start: boolean }) {
   return (
     <motion.div
       variants={fadeUpItem}
-      className="flex flex-col items-center gap-2 text-center"
+      className="flex flex-col items-center justify-center gap-2 text-center"
     >
-      <span className="font-heading font-extrabold text-5xl md:text-6xl flex items-baseline gap-2 text-brand-gradient">
+      <span className="font-heading font-extrabold text-3xl md:text-6xl flex items-baseline gap-2 text-brand-gradient">
         <span>{count}</span><span>{stat.suffix}</span>
       </span>
       <span className="text-sm text-muted-foreground uppercase tracking-widest">
