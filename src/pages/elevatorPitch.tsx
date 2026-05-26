@@ -235,7 +235,7 @@ export default function ElevatorPitch() {
 			style={{ minHeight: "260px" }}
 			/>
 			<p className="text-xs text-muted-foreground">
-			Use this as a script to practise from — aim for something that
+			Use this as a script to practice from — aim for something that
 			sounds natural when spoken, not read.
 			</p>
 		</div>
