@@ -11,6 +11,7 @@ import FAQ from "@/components/FAQ"
 import Tickets from "@/components/Tickets"
 
 function Home() {
+	console.log("Hello fellow developer! 👋 If you're seeing this, it means you're curious about how our website works. Feel free to take a look around!")
   	return(
 		<>
 			<SEO url="/" />

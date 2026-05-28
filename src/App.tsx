@@ -13,6 +13,8 @@ import Privacy from "@/pages/privacy"
 import QRGenerator from "@/pages/qrCodeGenerator"
 import ElevatorPitch from "./pages/elevatorPitch"
 import Gallery from "./pages/gallery"
+import About from "./pages/about"
+import SocialCard from "./pages/socialCard"
 
 
 function App() {
@@ -25,9 +27,11 @@ function App() {
 						<Route path="/speaker/:id" element={<SpeakerProfile />} />
 						{/* <Route path="/sponsors" element={<Sponsors />} />
 						<Route path="/team" element={<Team />} /> */}
+						<Route path="/about" element={<About />} />
 						<Route path="/gallery" element={<Gallery />} />
 						<Route path="/qr-generator" element={<QRGenerator />} />
 						<Route path="/elevator-pitch" element={<ElevatorPitch />} />
+						<Route path="/social-card" element={<SocialCard />} />
 						<Route path="/tickets" element={<Tickets />} />
 						<Route path="/terms" element={<Terms />} />
 						<Route path="/privacy" element={<Privacy />} />

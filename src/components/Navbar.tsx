@@ -90,7 +90,7 @@ export function Navbar({ theme, onToggleTheme, onOpenPalette }: NavbarProps) {
             <Search className="size-3" />
             <span>Search</span>
             <kbd className="font-mono text-[10px] bg-background border border-border rounded p-1">
-              ⌘K
+              ctrl + K
             </kbd>
           </button>
 
