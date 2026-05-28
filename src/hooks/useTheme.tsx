@@ -1,18 +1,32 @@
-// src/hooks/useTheme.ts
 import { useEffect, useState } from "react"
 
 type Theme = "light" | "dark"
 
-export function useTheme() {
-  const [theme, setTheme] = useState<Theme>(() => {
+function getStoredTheme(): Theme {
+  try {
     return (localStorage.getItem("tin-theme") as Theme) ?? "dark"
-  })
+  } catch {
+    return "dark"
+  }
+}
+
+function setStoredTheme(theme: Theme) {
+  try {
+    localStorage.setItem("tin-theme", theme)
+  } catch {
+	console.log("Hi Ethan! I found the reason your browser is being special...")
+  }
+}
+
+export function useTheme() {
+  const [theme, setTheme] = useState<Theme>(getStoredTheme)
 
   useEffect(() => {
-    document.documentElement.classList.toggle("dark", theme === "dark")
-    localStorage.setItem("tin-theme", theme)
+    const root = document.documentElement
+    root.classList.toggle("dark", theme === "dark")
+    root.setAttribute("data-theme", theme)
+    setStoredTheme(theme)
 
-    // Update theme-color meta tag to match
     const meta = document.querySelector('meta[name="theme-color"]')
     if (meta) {
       meta.setAttribute(
