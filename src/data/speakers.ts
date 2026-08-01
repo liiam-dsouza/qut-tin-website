@@ -86,7 +86,7 @@ export const speakers: Speaker[] = [
 		title: "CEO",
 		company: "Verlata Consulting",
 		bio: [
-			"Philip is the Engineering Manager at Tanda, a Brisbane-based B2B SaaS company building workforce management software used by thousands of businesses to run time and attendance, payroll, and HR for their frontline teams.",
+			"",
 		],
 		photo: "/speakers/jason-mills.png",
 		linkedin: "https://www.linkedin.com/in/jasonmills01/",
