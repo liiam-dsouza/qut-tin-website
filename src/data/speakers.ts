@@ -5,7 +5,7 @@ export interface Speaker {
 	company: string
 	bio: string[]
 	photo: string
-	linkedin: string
+	linkedin?: string
 }
 
 export const speakers: Speaker[] = [
@@ -46,5 +46,49 @@ export const speakers: Speaker[] = [
 		],
 		photo: "/speakers/philip-fraser.png",
 		linkedin: "https://www.linkedin.com/in/philip-fraser/",
-	}
+	},
+	{
+		id: "emily-banks",
+		name: "FLTLT Emily Banks",
+		title: "Electronics Engineer Aviation Officer",
+		company: "Australian Defence Force",
+		bio: [
+			"Flight Lieutenant Emily Banks is an Electronics Engineer Aviation Officer in the Royal Australian Air Force, completing her degree at the Australian Defence Force Academy in 2015. Since Graduating Emily has worked in a wide range of positions including both ground and aviation capabilities. Emily is currently working at ADF Careers in Brisbane.",
+		],
+		photo: "/speakers/emily-banks.png",
+	},
+	{
+		id: "samson-blackburn",
+		name: "Samson Blackburn",
+		title: "AI Architect",
+		company: "Avanade",
+		bio: [
+			"Samson is an APAC AI Architect at Avanade with many years of technical and business professional experience, having held diverse roles across Emergency Systems Repair, IT, Cybersecurity, Strategy, Data and Applied AI.",
+			"He is also a founder of the Physical AI Builders community where he helps others unlock their creativity to build with AI."
+		],
+		photo: "/speakers/samson-blackburn.png",
+		linkedin: "https://www.linkedin.com/in/samsonblackburn/",
+	},
+	{
+		id: "mitch-redshaw",
+		name: "Mitch Redshaw",
+		title: "Director",
+		company: "Redwood Cyber",
+		bio: [
+			"Mitch Redshaw is a cyber risk and readiness professional with 14 years’ experience. He brings a wealth of background across State, Federal Government, and critical infrastructure cyber security consulting in cyber crisis management, cyber exercise delivery, strategy and threat intelligence. Mitch is experienced as a former global cyber crisis management, planning and exercise lead with a top-5 worldwide consulting firm servicing large organisations across all continents.",
+		],
+		photo: "/speakers/mitch-redshaw.png",
+		linkedin: "https://www.linkedin.com/in/mitch-redshaw/",
+	},
+	{
+		id: "jason-mills",
+		name: "Jason Mills",
+		title: "CEO",
+		company: "Verlata Consulting",
+		bio: [
+			"Philip is the Engineering Manager at Tanda, a Brisbane-based B2B SaaS company building workforce management software used by thousands of businesses to run time and attendance, payroll, and HR for their frontline teams.",
+		],
+		photo: "/speakers/jason-mills.png",
+		linkedin: "https://www.linkedin.com/in/jasonmills01/",
+	},
 ] as const
