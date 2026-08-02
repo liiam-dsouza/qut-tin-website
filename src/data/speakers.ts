@@ -27,7 +27,7 @@ export const speakers: Speaker[] = [
 		title: "Founding Membership Chair",
    	 	company: "ISC2 Queensland Chapter",
 		bio: [
-			"Sean is the Founding Membership Chair at (ISC)2 Queensland Chapter, and works as the Director of Security and Infrastructure at Best Practice Software.Sean holds a CISSP, CC, Executive MBA from ACU, Bachelor of IT majoring in Networked Systems from QUT and Grad Cert in the Psychology of Risk from ACU.",
+			"Sean Finn is the Founding Membership Chair at (ISC)2 Queensland Chapter, and works as the Director of Security and Infrastructure at Best Practice Software.Sean holds a CISSP, CC, Executive MBA from ACU, Bachelor of IT majoring in Networked Systems from QUT and Grad Cert in the Psychology of Risk from ACU.",
 			"Sean has deep experience in providing mission critical ICT in internet-facing ecommerce systems and operational technology systems for Mining, Defence, Aviation and Health Care. Sean has acted as the final technical escalation point for incident response over a twenty-year period for these environments and has a deep passion for incident prevention and automating security into the software supply chain.",
 			"Since 2000 he has incubated, developed and sold multiple small ICT Technology firms from the ground up in Datacentres, Webhosting, ISP and Ecommerce and has extensive practical commercial experience alongside his technical expertise.",
 			"Sean is recognised as an Experienced Dev Ops Software Engineer, Solutions Architect, Internet Network Engineer, Commercial Hosting provider and a Mining and Defence Secure ICT Platform Engineer."
@@ -41,7 +41,7 @@ export const speakers: Speaker[] = [
 		title: "Engineering Manager",
 		company: "Tanda",
 		bio: [
-			"Philip is the Engineering Manager at Tanda, a Brisbane-based B2B SaaS company building workforce management software used by thousands of businesses to run time and attendance, payroll, and HR for their frontline teams.",
+			"Philip Fraser is the Engineering Manager at Tanda, a Brisbane-based B2B SaaS company building workforce management software used by thousands of businesses to run time and attendance, payroll, and HR for their frontline teams.",
 			"He leads a group of engineering teams working on a Rails monolith that ships to production continuously. His focus is on building teams that move fast, ship often, and stay close to the customers they're building for - and lately, on figuring out where AI fits into how they do that day-to-day.",
 		],
 		photo: "/speakers/philip-fraser.png",
@@ -63,7 +63,7 @@ export const speakers: Speaker[] = [
 		title: "AI Architect",
 		company: "Avanade",
 		bio: [
-			"Samson is an APAC AI Architect at Avanade with many years of technical and business professional experience, having held diverse roles across Emergency Systems Repair, IT, Cybersecurity, Strategy, Data and Applied AI.",
+			"Samson Blackburn is an APAC AI Architect at Avanade with many years of technical and business professional experience, having held diverse roles across Emergency Systems Repair, IT, Cybersecurity, Strategy, Data and Applied AI.",
 			"He is also a founder of the Physical AI Builders community where he helps others unlock their creativity to build with AI."
 		],
 		photo: "/speakers/samson-blackburn.png",
@@ -86,7 +86,8 @@ export const speakers: Speaker[] = [
 		title: "Chief Executive Officer",
 		company: "Verlata Consulting",
 		bio: [
-			"",
+			"Jason Mills is the CEO of Verlata Consulting, a global implementation partner for Cloud Legal Services he founded in 2014. What began as an Australia-focused practice has since expanded internationally, with offices in New Zealand, Singapore, the UK, and Japan. With over 13 years of experience working with law firms, Jason combines deep technical IT expertise with hands-on management experience to help organisations bridge the gap between business strategy and technology.",
+			"Today, Jason leads Verlata's work across document management, practice management, business intelligence, automation, and AI and innovation consulting, helping legal and professional services firms solve their unique challenges through practical, technology-driven solutions."
 		],
 		photo: "/speakers/jason-mills.png",
 		linkedin: "https://www.linkedin.com/in/jasonmills01/",
