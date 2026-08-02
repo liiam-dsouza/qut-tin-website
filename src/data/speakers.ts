@@ -83,7 +83,7 @@ export const speakers: Speaker[] = [
 	{
 		id: "jason-mills",
 		name: "Jason Mills",
-		title: "CEO",
+		title: "Chief Executive Officer",
 		company: "Verlata Consulting",
 		bio: [
 			"",
