@@ -92,4 +92,26 @@ export const speakers: Speaker[] = [
 		photo: "/speakers/jason-mills.png",
 		linkedin: "https://www.linkedin.com/in/jasonmills01/",
 	},
+	{
+		id: "patrick-strong",
+		name: "Patrick Strong",
+		title: "Senior Consultant",
+		company: "Vivanti",
+		bio: [
+			"Patrick Strong is a Queensland University of Technology graduate whose career spans a broad spectrum of roles across the IT landscape. Consistently championing the human element of technology, Patrick pairs technical adaptability with strong people skills to bridge the gap between complex technical solutions and the humans who develop, manage, and use them in 'the real world.' Currently at Vivanti, helping businesses unlock intelligent automation and data-driven strategy.",
+		],
+		photo: "/speakers/patrick-strong.png",
+		linkedin: "https://www.linkedin.com/in/patstrong/",
+	},
+	{
+		id: "isaac-tonkin",
+		name: "Isaac Tonkin",
+		title: "Manager",
+		company: "KPMG",
+		bio: [
+			"Isaac is a Manager at KPMG, applying AI and analytics techniques across enterprise, financial, and research environments. He recently completed his PhD specialising in deep reinforcement learning for trade execution, alongside a range of other experiences across his career.",
+		],
+		photo: "/speakers/isaac-tonkin.png",
+		linkedin: "https://www.linkedin.com/in/isaactonkin/",
+	},
 ] as const
