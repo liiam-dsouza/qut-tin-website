@@ -48,8 +48,8 @@ export const schedule: ScheduleItem[] = [
 		id: "keynote-3",
 		time: "4:20 PM",
 		type: "talk",
-		title: "Keynote Presentation - 3",
-		description: "We're confirming the final keynote speaker for TIN 2026, and will update this schedule as soon as we have the details. Stay tuned!",
+		title: "Keynote Presentation - Patrick Strong",
+		description: "Hear Patrick speak about the non-technical things that actually moved his career forward: why people skills matter as much as technical ones, why speaking up and challenging the status quo beats staying quiet, and how understanding business value is the key to doing great work without burning out.",
 		durationMins: 20,
 	},
 	{
@@ -67,7 +67,7 @@ export const schedule: ScheduleItem[] = [
 		title: "Panel Q&A",
 		description: "An open forum with our panel of industry professionals. Bring your questions - whether you're curious about breaking into the industry, navigating your career, or what the future of tech looks like. This is your chance to get insights directly from the experts.",
 		durationMins: 60,
-		speakers: ["mia-wheatley", "sean-finn", "philip-fraser", "emily-banks", "jason-mills"],
+		speakers: ["mia-wheatley", "sean-finn", "philip-fraser", "emily-banks", "jason-mills", "isaac-tonkin"],
 		expandable: true,
 	},
 	{
