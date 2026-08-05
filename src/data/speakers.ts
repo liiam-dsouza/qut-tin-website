@@ -73,7 +73,7 @@ export const speakers: Speaker[] = [
 		id: "mitch-redshaw",
 		name: "Mitch Redshaw",
 		title: "Director",
-		company: "Redwood Cyber",
+		company: "Redwood Security",
 		bio: [
 			"Mitch Redshaw is a cyber risk and readiness professional with 14 years’ experience. He brings a wealth of background across State, Federal Government, and critical infrastructure cyber security consulting in cyber crisis management, cyber exercise delivery, strategy and threat intelligence. Mitch is experienced as a former global cyber crisis management, planning and exercise lead with a top-5 worldwide consulting firm servicing large organisations across all continents.",
 		],
