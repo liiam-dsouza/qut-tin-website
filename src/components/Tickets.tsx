@@ -33,7 +33,7 @@ function Tickets() {
         {/* Cards */}
         <motion.div
           variants={fadeUpContainer}
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch"
+          className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 items-stretch"
         >
           {tickets.map((tier) => (
             <motion.div
