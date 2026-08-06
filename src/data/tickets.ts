@@ -13,20 +13,20 @@ export interface TicketTier {
 }
 
 export const tickets: TicketTier[] = [
-  {
-    id: "estudent",
-    name: "eStudent",
-    price: 20,
-    description: "Online digital experience for those who can't attend in person.",
-    perks: [
-      "Online digital experience",
-      "Access to keynote talks",
-      "Access to recordings",
-      "Career guide",
-    ],
-    ctaLabel: "Get Your Ticket",
-    ctaHref: "https://events.humanitix.com/tech-industry-night-2026",
-  },
+//   {
+//     id: "estudent",
+//     name: "eStudent",
+//     price: 20,
+//     description: "Online digital experience for those who can't attend in person.",
+//     perks: [
+//       "Online digital experience",
+//       "Access to keynote talks",
+//       "Access to recordings",
+//       "Career guide",
+//     ],
+//     ctaLabel: "Get Your Ticket",
+//     ctaHref: "https://events.humanitix.com/tech-industry-night-2026",
+//   },
   {
     id: "student",
     name: "Student",
