@@ -22,7 +22,7 @@ export const schedule: ScheduleItem[] = [
 	},
 	{
 		id: "opening",
-		time: "3:30 PM",
+		time: "3:40 PM",
 		type: "talk",
 		title: "Event Opening",
 		description: "We kick off Tech Industry Night 2026 with a welcome from the organising team. Get settled, meet the faces behind the event, and hear what's in store for the night ahead. Welcome to Tech Industry Night 2026!",
@@ -30,7 +30,7 @@ export const schedule: ScheduleItem[] = [
 	},
 	{
 		id: "keynote-1",
-		time: "3:40 PM",
+		time: "3:50 PM",
 		type: "talk",
 		title: "Keynote Presentation - Samson Blackburn",
 		description: "Samson shares his insights into where AI is actually heading and what it means for your career, a unique perspective that you won't get from social media",
@@ -38,7 +38,7 @@ export const schedule: ScheduleItem[] = [
 	},
 	{
 		id: "keynote-2",
-		time: "4:00 PM",
+		time: "4:10 PM",
 		type: "talk",
 		title: "Keynote Presentation - Mitch Redshaw",
 		description: "A practical look into Mitch's journey to global cyber leader, and the lessons, mindsets and career decisions that helped turn opportunities into long-term success.",
@@ -46,23 +46,15 @@ export const schedule: ScheduleItem[] = [
 	},
 	{
 		id: "keynote-3",
-		time: "4:20 PM",
+		time: "4:30 PM",
 		type: "talk",
 		title: "Keynote Presentation - Patrick Strong",
 		description: "Hear Patrick speak about the non-technical things that actually moved his career forward: why people skills matter as much as technical ones, why speaking up and challenging the status quo beats staying quiet, and how understanding business value is the key to doing great work without burning out.",
 		durationMins: 20,
 	},
 	{
-		id: "keynote-4",
-		time: "4:40 PM",
-		type: "talk",
-		title: "Keynote Presentation - 4",
-		description: "We're confirming the final keynote speaker for TIN 2026, and will update this schedule as soon as we have the details. Stay tuned!",
-		durationMins: 20,
-	},
-	{
 		id: "panel-qa",
-		time: "5:00 PM",
+		time: "4:50 PM",
 		type: "qa",
 		title: "Panel Q&A",
 		description: "An open forum with our panel of industry professionals. Bring your questions - whether you're curious about breaking into the industry, navigating your career, or what the future of tech looks like. This is your chance to get insights directly from the experts.",
@@ -72,7 +64,7 @@ export const schedule: ScheduleItem[] = [
 	},
 	{
 		id: "networking",
-		time: "5:50 PM",
+		time: "6:00 PM",
 		type: "networking",
 		title: "Networking & Food",
 		description: "The floor is yours. Mingle with industry professionals, swap details, and grab some food and drinks on us. This is the heart of the night - make the most of every conversation. We'll have conversation starters and tips to help you break the ice.",
@@ -80,7 +72,7 @@ export const schedule: ScheduleItem[] = [
 	},
 	{
 		id: "closing",
-		time: "8:00 PM",
+		time: "7:45 PM",
 		type: "talk",
 		title: "Event Conclusion",
 		description: "A wrap on an incredible night. We'll thank our speakers, sponsors, and everyone who made TIN 2026 happen - but the connections you made tonight are just getting started. We'll share resources to help you keep the momentum going in your career.",
